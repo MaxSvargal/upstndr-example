@@ -7,6 +7,6 @@
     "start": "upstndr dev"
   },
   "dependencies": {
-    "upstndr": "file:../upstndr"
+    "upstndr": "0.0.1"
   }
 }
