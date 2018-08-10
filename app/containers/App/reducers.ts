@@ -1,8 +1,18 @@
 import { createReducer } from 'upstndr'
+import { converge, prop, inc, assoc, compose, identity } from 'ramda'
 import { increaseTimer } from './actions'
 
-export const globalTimer = createReducer({
-  [increaseTimer.toString()]: (state: any) => state + 1
-}, 0)
+const defaultState = {
+  globalTimer: 0
+}
 
-export default globalTimer
+const reducer = createReducer<State>({}, defaultState)
+
+reducer.on(
+  increaseTimer,
+  converge(assoc('globalTimer'), [ compose(inc, prop('globalTimer')), identity ])
+)
+
+export type State = typeof defaultState
+
+export default reducer

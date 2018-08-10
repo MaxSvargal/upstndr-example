@@ -1,13 +1,18 @@
 import { createSelector } from 'upstndr'
-import { State } from './reducers'
+import { Reducer } from './reducers'
+import { prop, last } from 'ramda'
 
-export const selectTodo = (state: { todo: State }) => state.todo
+type Selector<T> = (a: T) => any
+type State = Selector<{ todo: Reducer }>
+type StateTodo = Selector<Reducer>
+
+export const selectTodo = <State>prop('todo')
 
 export const makeSelectItems = () =>
-  createSelector(selectTodo, (state: any) => state.items)
+  createSelector(selectTodo, <StateTodo>prop('items'))
 
 export const makeSelectTerm = () =>
-  createSelector(selectTodo, (state: State) => state.term)
+  createSelector(selectTodo, <StateTodo>prop('term'))
 
 export const makeSelectLastItem = () =>
-  createSelector(makeSelectItems(), (items: State['items']) => items.slice(-1)[0])
+  createSelector(makeSelectItems(), last)

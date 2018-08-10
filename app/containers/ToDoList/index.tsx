@@ -1,4 +1,5 @@
 import React, { Component, Fragment, ChangeEvent } from 'upstndr/internals/react'
+import { Link } from 'upstndr/internals/react-router-dom'
 import { Dispatch } from 'upstndr/internals/redux'
 import { compose, connect, injectReducer, injectSaga, createStructuredSelector } from 'upstndr'
 
@@ -17,8 +18,9 @@ class App extends Component<Props> {
   render() {
     return (
       <Fragment>
+        <Link to='/'>Go back</Link>
         <input onChange={this.props.onChangeTerm} />
-        <button onClick={this.props.addItem} />
+        <button onClick={this.props.addItem}>Add</button>
         <div>
           { this.props.items && this.props.items.map(item => (
             <div key={item}>{item}</div>

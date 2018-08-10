@@ -1,7 +1,7 @@
 import { createReducer } from 'upstndr'
 import { changeTerm, commitTerm } from './actions'
 
-export interface State {
+export interface Reducer {
   items: string[]
   term: string
 }
@@ -15,4 +15,4 @@ export default createReducer({
 }, {
   items: [],
   term: ''
-} as State)
+} as Reducer)

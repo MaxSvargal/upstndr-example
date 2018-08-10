@@ -1,12 +1,15 @@
 {
   "name": "upstndr-example",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "upstndr dev"
+    "start": "upstndr",
+    "production": "upstndr production"
   },
   "dependencies": {
-    "upstndr": "0.0.1"
+    "@types/ramda": "^0.25.36",
+    "ramda": "^0.25.0",
+    "upstndr": "^0.0.3"
   }
 }

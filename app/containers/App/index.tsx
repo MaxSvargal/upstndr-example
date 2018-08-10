@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'upstndr/internals/react'
+import React, { Component, Fragment, ErrorInfo } from 'upstndr/internals/react'
 import { Switch, Route } from 'upstndr/internals/react-router-dom'
-import { compose, connect, injectReducer, injectSaga, createStructuredSelector, withRouter } from 'upstndr'
+import { compose, connect, injectReducer, injectSaga, createStructuredSelector } from 'upstndr'
 
 import GlobalTimer from 'components/GlobalTimer'
 import HomePage from 'containers/Home'
@@ -15,6 +15,11 @@ interface Props {
 }
 
 class App extends Component<Props> {
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    // Call logger here
+    console.log({ error, info })
+  }
+
   render() {
     return (
       <Fragment>
@@ -29,10 +34,10 @@ class App extends Component<Props> {
 }
 
 const mapStateToProps = createStructuredSelector({
-  globalTimer: makeSelectGlobalTimer
+  globalTimer: makeSelectGlobalTimer()
 })
 const withConnect = connect(mapStateToProps)
-const withReducer = injectReducer({ key: 'globalTimer', reducer })
-const withSaga = injectSaga({ key: 'home', saga })
+const withReducer = injectReducer({ key: 'global', reducer })
+const withSaga = injectSaga({ key: 'global', saga })
 
-export default compose(withRouter, withConnect, withReducer, withSaga)(App)
+export default compose(withReducer, withSaga, withConnect)(App)
