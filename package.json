@@ -8,8 +8,10 @@
     "production": "upstndr production"
   },
   "dependencies": {
+    "@types/isomorphic-fetch": "^0.0.34",
     "@types/ramda": "^0.25.36",
+    "isomorphic-fetch": "^2.2.1",
     "ramda": "^0.25.0",
-    "upstndr": "^0.0.3"
+    "upstndr": "0.0.3"
   }
 }

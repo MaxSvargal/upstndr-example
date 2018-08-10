@@ -5,6 +5,7 @@ import { compose, connect, injectReducer, injectSaga, createStructuredSelector }
 import GlobalTimer from 'components/GlobalTimer'
 import HomePage from 'containers/Home'
 import ToDoListPage from 'containers/ToDoList'
+import RepositoriesPage from 'containers/Repositories'
 
 import reducer from './reducers'
 import saga from './sagas'
@@ -27,6 +28,7 @@ class App extends Component<Props> {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/todo" component={ToDoListPage} />
+          <Route path="/repositories/:userName?" component={RepositoriesPage} />
         </Switch>
       </Fragment>
     )
