@@ -1,6 +1,6 @@
-import React, { Component, Fragment, ChangeEvent } from 'upstndr/internals/react'
-import { Link } from 'upstndr/internals/react-router-dom'
-import { Dispatch } from 'upstndr/internals/redux'
+import React, { Component, Fragment, ChangeEvent } from 'react'
+import { Link } from 'react-router-dom'
+import { Dispatch } from 'redux'
 import { compose, connect, injectReducer, injectSaga, createStructuredSelector } from 'upstndr'
 
 import { changeTerm, addItem } from './actions'

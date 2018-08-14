@@ -1,5 +1,5 @@
-import React, { Component, Fragment, ErrorInfo } from 'upstndr/internals/react'
-import { Switch, Route } from 'upstndr/internals/react-router-dom'
+import React, { Component, Fragment, ErrorInfo } from 'react'
+import { Switch, Route } from 'react-router-dom'
 import { compose, connect, injectReducer, injectSaga, createStructuredSelector } from 'upstndr'
 
 import GlobalTimer from 'components/GlobalTimer'

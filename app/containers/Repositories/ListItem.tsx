@@ -1,4 +1,4 @@
-import React from 'upstndr/internals/react'
+import React from 'react'
 import { styled } from 'upstndr'
 import { Repo } from './reducers'
 

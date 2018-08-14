@@ -1,4 +1,4 @@
-import { fork, put, take, select } from 'upstndr/internals/redux-saga-effects'
+import { fork, put, take, select } from 'redux-saga/effects'
 
 import { commitTerm, addItem } from './actions'
 import { makeSelectTerm, makeSelectLastItem } from './selectors'

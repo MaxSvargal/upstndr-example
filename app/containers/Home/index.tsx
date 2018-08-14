@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'upstndr/internals/react'
-import { Link } from 'upstndr/internals/react-router-dom'
+import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class HomePage extends Component {
   render() {

@@ -1,6 +1,6 @@
 {
   "name": "upstndr-example",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,6 +12,6 @@
     "@types/ramda": "^0.25.36",
     "isomorphic-fetch": "^2.2.1",
     "ramda": "^0.25.0",
-    "upstndr": "0.0.3"
+    "upstndr": "0.0.8"
   }
 }

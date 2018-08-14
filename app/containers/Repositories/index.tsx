@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'upstndr/internals/react'
-import { Route } from  'upstndr/internals/react-router-dom'
+import React, { PureComponent } from 'react'
+import { Route } from  'react-router-dom'
 import { compose, connect, injectReducer, injectSaga, createStructuredSelector } from 'upstndr'
 
 import reducer, { State } from './reducers'

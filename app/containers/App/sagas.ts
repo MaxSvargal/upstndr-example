@@ -1,5 +1,5 @@
-import { all, fork, put } from 'upstndr/internals/redux-saga-effects'
-import { delay } from 'upstndr/internals/redux-saga'
+import { all, fork, put } from 'redux-saga/effects'
+import { delay } from 'redux-saga'
 import { increaseTimer } from './actions'
 
 const { BROWSER } = process.env

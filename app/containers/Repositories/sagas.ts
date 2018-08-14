@@ -1,6 +1,6 @@
-import { all, fork, put, call, throttle, takeLatest } from 'upstndr/internals/redux-saga-effects'
+import { all, fork, put, call, throttle, takeLatest } from 'redux-saga/effects'
 import fetch from 'isomorphic-fetch'
-import { LOCATION_CHANGE } from 'upstndr/internals/connected-react-router'
+import { LOCATION_CHANGE } from 'connected-react-router'
 
 import { setRepos, fetchReposError } from './actions'
 
